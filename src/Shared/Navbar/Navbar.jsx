@@ -84,8 +84,27 @@ const Navbar = () => {
                         {navigation}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <button className="btn btn-primary text-white rounded-full">Button</button>
+                <div className="flex-none gap-2 navbar-end">
+                    <div className="form-control">
+                        <input type="text" placeholder="Search" className="input border-primary input-bordered rounded-full w-full" />
+                    </div>
+                    <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src="https://cdn.vectorstock.com/i/preview-1x/28/63/profile-placeholder-image-gray-silhouette-vector-21542863.jpg" />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                            <li>
+                                <a className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </Container>
